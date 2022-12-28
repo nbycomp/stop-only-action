@@ -2,5 +2,5 @@
 
 : "${GITHUB_WORKSPACE?GITHUB_WORKSPACE has to be set. Did you use the actions/checkout action?}"
 
-pushd /opt/stop-only
+cd /opt/stop-only
 npm test
