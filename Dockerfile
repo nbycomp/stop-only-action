@@ -17,4 +17,4 @@ COPY package.json package-lock.json ./
 RUN npm ci
 
 COPY entrypoint.sh .
-ENTRYPOINT [ "./entrypoint.sh" ]
+ENTRYPOINT [ "/opt/stop-only/entrypoint.sh" ]
