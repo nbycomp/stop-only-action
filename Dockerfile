@@ -14,6 +14,7 @@ RUN apk add --no-cache grep
 WORKDIR /opt/stop-only
 
 COPY package.json package-lock.json ./
+COPY patches patches
 RUN npm ci
 
 COPY entrypoint.sh .

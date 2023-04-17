@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Github action to prevent `.only` from being left in Cypress tests accidentally",
   "scripts": {
-    "test": "stop-only --folder \"${GITHUB_WORKSPACE}\" --skip node_modules"
+    "test": "stop-only --folder \"${GITHUB_WORKSPACE}\" --regex \"${REGEX_STRING}\" --skip node_modules",
+    "postinstall": "npx patch-package"
   },
   "repository": {
     "type": "git",
@@ -16,7 +17,8 @@
     "url": "https://github.com/nbycomp/stop-only-action/issues"
   },
   "homepage": "https://github.com/nbycomp/stop-only-action#readme",
-  "dependencies": {
-    "stop-only": "^3.1.2"
+  "devDependencies": {
+    "patch-package": "^7.0.0",
+    "stop-only": "^3.3.1"
   }
 }
